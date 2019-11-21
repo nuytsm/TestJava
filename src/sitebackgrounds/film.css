@@ -1,0 +1,95 @@
+body {
+background-color: black;
+}   
+li {
+  float: left;
+}
+h1 {
+    color: orangered;
+    width: 450px;
+}
+
+ul {
+float:left;
+  list-style-type: none;
+  margin: 10;
+  padding: 30;
+  background-color: mediumvioletred;
+  border: 1px solid#555;
+  position: fixed;
+animation-name: baranimatie;
+animation-duration: 2s;
+animation-iteration-count:  ;
+
+    
+}
+
+li a {
+    padding: 30px;
+  display: block;
+  color: darkslateblue;
+    transition: 3s;
+}  
+p {
+    
+}
+@keyframes baranimatie {
+        
+        0%{transform: translate(1000px, 0px)}
+        100%{transform: translate(0px, 0px)}
+}
+@keyframes slideelcamino {
+    0%{background-image: url('El%20camino1.jpg')}
+    33%{background-image: url('EL%20camino2.jpg')}
+    66%{background-image: url('EL%20camino3.jpg')}
+    
+}
+.filmslidetopgun{
+    animation-name:slidetopgun;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    
+}
+.filmslideelcamino{
+   
+    animation-name:slideelcamino;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    
+
+}
+@keyframes endgame {
+    0%{background-image: url('Endgame1.jpg');}
+    33%{background-image: url('Endgame2.jpg');}
+    66%{background-image: url('Endgame3.jpg');}
+  
+}
+.filmslideendgame{
+    width: 500px;
+    height: 500px;
+    animation-name:endgame;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;  
+    background-size: cover;
+    
+    
+}
+@keyframes slidetopgun {
+    0%{background-image: url('topgun1.jpg')}
+    33%{background-image: url('topgun2.jpg')}
+    66%{background-image: url('topgun3.jpg')}
+    
+}
+.film {
+    animation-name: film;
+    animation-duration: 3S;
+    animation-iteration-count: infinite;
+}
+@keyframes film {
+    0%{font-size: 20px}
+    50%{font-size: 25px}
+    100%{font-size: 20px}
+}
+
+

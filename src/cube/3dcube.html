@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>3d cube</title>
+</head>
+<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+.scene {
+	width: 500px;
+	height: 1000px;
+	position: absolute;
+	top: 80px;
+  	right: 0;
+	border: 0px solid #CCC;
+	margin: 80px;
+	perspective: 1000px;
+/* 	animation: changeperspective 10s infinite linear; */
+}
+
+@keyframes changeperspective{
+	from {
+		perspective: 500px;
+	}
+	to {
+		perspective: 500px;
+	}
+}
+
+.cube {
+	width: 400px;
+	height: 400px;
+	position: relative;
+	border: solid 0px white;
+	transform-style: preserve-3d;
+	transform: translateZ(-100px);
+	transition: transform 1s;
+	animation:rotatecube 20s infinite linear;
+}
+
+
+.cube__face {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border: 2px solid black;
+	line-height: 200px;
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+.cube__face--front {
+	background: hsla(0, 100%, 50%, 0.7);
+	transform: rotateY(0deg) translateZ(-100px) ;
+}
+
+.cube__face--right {
+	background: hsla(60, 100%, 50%, 0.7);
+	transform:  rotateY(-90deg) translateZ(-100px);
+}
+
+.cube__face--back {
+	background: hsla(120, 100%, 50%, 0.7);
+	transform:  rotateY(-180deg) translateZ(-100px);
+}
+
+.cube__face--left {
+	background: hsla(180, 100%, 50%, 0.7);
+	transform:  rotateY(90deg) translateZ(-100px);
+} 
+
+.cube__face--top {
+	background: hsla(240, 100%, 50%, 0.7);
+	transform:  rotateX(-90deg) translateZ(-100px);
+}
+
+.cube__face--bottom {
+	background: hsla(300, 100%, 50%, 0.7);
+	transform:  rotateX(90deg) translateZ(-100px);
+}
+
+
+
+label {
+	margin-right: 10px;
+}
+
+@keyframes rotatecube{
+	from {
+		transform: rotateX(0deg) rotateY(0deg);
+	}
+	to {
+		transform: rotateX(360deg) rotateY(360deg);
+	}
+}
+</style>
+<body>
+
+	<div class="scene">
+		<div class="cube">
+			<div class="cube__face cube__face--front">front</div>
+			<div class="cube__face cube__face--back">back</div>
+			<div class="cube__face cube__face--right">right</div>
+			<div class="cube__face cube__face--left">left</div>
+			<div class="cube__face cube__face--top">top</div>
+			<div class="cube__face cube__face--bottom">bottom</div>
+		</div>
+	</div>
+
+</body>
+</html>
