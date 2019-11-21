@@ -6,6 +6,8 @@ public class Starter {
 		Arrays arrays = new Arrays();
 //		arrays.reverseString();
 		
+		System.out.println();
+		
 	}
 
 }
