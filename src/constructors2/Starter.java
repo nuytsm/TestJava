@@ -22,6 +22,11 @@ public class Starter {
 		System.out.println(klant3.naam);
 		
 		Klant klant4 = new Klant("De Cap", "Michiel");
+		klant4.getAdres().
+		
+		
+		Gemeente lommel = new Gemeente("Lommel", "3920", "Limburg");
+		Gemeente sinttruiden = new Gemeente("Sint Truiden", "Limburg");
 	}
 
 }

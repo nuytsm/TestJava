@@ -30,7 +30,7 @@ public class Queries {
 	public void createSelectQuery() throws SQLException {
 		
 		PreparedStatement ps = con.prepareStatement("SELECT * FROM Artist WHERE name LIKE ? ");
-		List<String> searchforName = searchforName(ps, "Iron");
+		List<String> searchforName = searchforName(ps, "Iron Maiden");
 		System.out.println(searchforName);
 	}
 
