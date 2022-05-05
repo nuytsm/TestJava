@@ -2,7 +2,7 @@ package games;
 
 public class Kruisboogschutter extends Boogschutter{
 	
-	int extradamage;
+	int extradamage = 50;
 	
 	public Kruisboogschutter() {
 		super(80);
